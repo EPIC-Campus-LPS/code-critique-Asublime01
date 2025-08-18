@@ -2,14 +2,14 @@ import requests
 import sys
 
 
-
+# Retrieves arguments that specify the code issue and the file itself
 code_file = sys.argv[1]
-
 code_problem = sys.argv[2]
 
 # URL of the Ollama API (default is localhost)
 url = "http://localhost:11434/api/generate"
 
+# Opens problem file and parses its contents into a single string
 with open(f'{code_file}', 'r') as f:
     content = f.read()
 
